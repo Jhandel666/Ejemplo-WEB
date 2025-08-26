@@ -1,0 +1,77 @@
+/* === Variables y estilos base === */
+:root {
+  --bg:#0b0e14;
+  --panel:#121723;
+  --soft:#1a2130;
+  --text:#e6e9ef;
+  --muted:#aab3c5;
+  --acc:#7c5cff;
+  --acc-2:#00d1b2;
+  --ring: 0 0 0 3px rgba(124,92,255,.25);
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --maxw: 1100px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:#f7f8fb;
+    --panel:#ffffff;
+    --soft:#eef1f7;
+    --text:#10131a;
+    --muted:#5b6477;
+    --shadow:0 8px 24px rgba(16,19,26,.08);
+  }
+}
+*{box-sizing:border-box}
+body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6}
+a{color:inherit; text-decoration:none}
+.container{width:100%; max-width:var(--maxw); margin:auto; padding:0 20px}
+
+/* Header */
+header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in hsl, var(--bg), transparent 35%); border-bottom:1px solid color-mix(in hsl, var(--text), transparent 90%); z-index:10}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700}
+.brand .logo{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--acc),var(--acc-2)); display:grid; place-items:center; box-shadow:var(--shadow)}
+nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
+nav a{padding:8px 12px; border-radius:10px; color:var(--muted)}
+nav a:hover{color:var(--text); background:var(--soft)}
+.cta{padding:10px 14px; background:var(--acc); color:white; border-radius:12px; font-weight:600; box-shadow:var(--shadow)}
+
+/* Hero */
+.hero{padding:68px 0 32px}
+.hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:36px; align-items:center}
+h1{font-size:clamp(32px,6vw,52px); margin:14px 0}
+.lead{font-size:clamp(16px,2.3vw,18px); color:var(--muted)}
+.hero-cta{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+.btn{padding:12px 16px; border-radius:12px; font-weight:600; border:1px solid color-mix(in hsl, var(--text), transparent 85%); background:var(--panel)}
+.btn.acc{background:var(--acc); color:#fff; border-color:transparent}
+
+.avatar-card{background:var(--panel); border:1px solid color-mix(in hsl, var(--text), transparent 90%); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+.avatar{aspect-ratio:1/1; border-radius:12px; background:linear-gradient(135deg, var(--soft), transparent); display:grid; place-items:center; font-size:38px; color:var(--muted)}
+
+/* Secciones */
+section{padding:56px 0}
+.section-title{font-size:26px; margin:0 0 22px; display:flex; align-items:center; gap:10px}
+.section-title .dot{width:8px; height:8px; border-radius:999px; background:var(--acc)}
+
+/* Grid y cards */
+.grid{display:grid; gap:18px}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--panel); border:1px solid color-mix(in hsl, var(--text), transparent 90%); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+.project img{border-radius:12px; border:1px solid color-mix(in hsl, var(--text), transparent 90%)}
+
+/* Skills */
+.skills{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.skill{background:var(--soft); border-radius:12px; padding:12px; display:flex; justify-content:space-between}
+.meter{height:8px; width:46%; background:color-mix(in hsl, var(--text), transparent 90%); border-radius:999px; overflow:hidden}
+.meter > span{display:block; height:100%; background:linear-gradient(90deg,var(--acc),var(--acc-2))}
+
+/* Timeline */
+.timeline{position:relative; margin-left:8px}
+.timeline:before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:color-mix(in hsl, var(--text), transparent 85%)}
+.t-item{position:relative; padding-left:36px; margin:18px 0}
+.t-item:before{content:""; position:absolute; left:2px; top:.5em; width:16px; height:16px; border-radius:999px; background:var(--acc)}
+
+/* Footer */
+footer{padding:28px 0; border-top:1px solid color-mix(in hsl, var(--text), transparent 88%); color:var(--muted); text-align:center}

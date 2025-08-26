@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Nombre – Portafolio</title>
+  <meta name="description" content="Portafolio personal de estudiante de Ingeniería de Software: proyectos, habilidades, experiencia y contacto." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Vinculamos el CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio"><div class="logo">💻</div><span>Tu Nombre</span></a>
+      <nav><ul>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul></nav>
+      <a class="cta" href="#contacto">Hablemos</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="badge">Estudiante de Ingeniería de Software • IV ciclo</span>
+        <h1>Apasionado por el desarrollo de software <br> y la creación de soluciones tecnológicas.</h1>
+        <p class="lead">Me interesa el desarrollo web, la gestión de bases de datos y el análisis de sistemas. Aquí encontrarás mis proyectos académicos, habilidades y experiencia.</p>
+        <div class="hero-cta">
+          <a class="btn acc" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="CV_TuNombre.pdf" download>Descargar CV</a>
+          <a class="btn" href="mailto:tuemail@correo.com">tuemail@correo.com</a>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <div class="avatar">🧑‍💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <div class="container">
+      <h2 class="section-title"><span class="dot"></span> Proyectos destacados</h2>
+      <div class="grid cols-3">
+        <article class="card project">
+          <img src="https://picsum.photos/seed/proyecto1/640/400" alt="Proyecto 1">
+          <h3>Sistema de Gestión Académica</h3>
+          <p>Aplicación en Java y MySQL para administrar cursos, estudiantes y calificaciones.</p>
+        </article>
+        <article class="card project">
+          <img src="https://picsum.photos/seed/proyecto2/640/400" alt="Proyecto 2">
+          <h3>Portafolio Web</h3>
+          <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos.</p>
+        </article>
+        <article class="card project">
+          <img src="https://picsum.photos/seed/proyecto3/640/400" alt="Proyecto 3">
+          <h3>Analizador de Datos</h3>
+          <p>Script en Python con Pandas para procesar y visualizar información académica.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <div class="container">
+      <h2 class="section-title"><span class="dot"></span> Habilidades</h2>
+      <div class="skills">
+        <div class="skill"><span>Java</span><div class="meter"><span style="width:80%"></span></div></div>
+        <div class="skill"><span>Python</span><div class="meter"><span style="width:75%"></span></div></div>
+        <div class="skill"><span>HTML & CSS</span><div class="meter"><span style="width:90%"></span></div></div>
+        <div class="skill"><span>JavaScript</span><div class="meter"><span style="width:70%"></span></div></div>
+        <div class="skill"><span>SQL / MySQL</span><div class="meter"><span style="width:65%"></span></div></div>
+        <div class="skill"><span>Git / GitHub</span><div class="meter"><span style="width:78%"></span></div></div>
+        <div class="skill"><span>Scrum</span><div class="meter"><span style="width:60%"></span></div></div>
+        <div class="skill"><span>Análisis de Sistemas</span><div class="meter"><span style="width:70%"></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia">
+    <div class="container">
+      <h2 class="section-title"><span class="dot"></span> Experiencia</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h4>Proyectos Académicos – Universidad</h4>
+          <small>2023 – Presente</small>
+          <p>Participación en proyectos de desarrollo de software aplicando metodologías ágiles.</p>
+        </div>
+        <div class="t-item">
+          <h4>Colaborador en proyectos personales</h4>
+          <small>2022 – 2023</small>
+          <p>Desarrollo de aplicaciones web y scripts en Python para la práctica de programación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title"><span class="dot"></span> Contacto</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Escríbeme</h3>
+          <form action="#" method="post">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div class="field">
+              <label for="msg">Mensaje</label>
+              <textarea id="msg" name="message" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+            <button class="btn acc" type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Información</h3>
+          <p>📍 Tu Ciudad, País • 📧 <a href="mailto:tuemail@correo.com">tuemail@correo.com</a></p>
+          <div class="social">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> Tu Nombre – Ingeniería de Software.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
